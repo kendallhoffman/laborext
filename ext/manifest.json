@@ -1,0 +1,22 @@
+{
+  "name": "Amazon Popup",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Shows a popup when the user navigates to Amazon.com",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://www.amazon.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.amazon.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
