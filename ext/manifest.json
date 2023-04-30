@@ -1,8 +1,8 @@
 {
-  "name": "Amazon Popup",
+  "name": "Labor Link",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Shows a popup when the user navigates to Amazon.com",
+  "description": "Google Chrome extension to limit user's interactions with companies who have demonstrated labor violations",
   "permissions": ["scripting", "activeTab"],
   "host_permissions": ["*://www.amazon.com/*"],
   "content_scripts": [
