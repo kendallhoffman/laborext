@@ -1,27 +1,39 @@
-body {
-  position: fixed;
-  color: pink;
+main{
+  /* background-color: #ed2939; */
   width: 100%;
   height: 100%;
-  z-index: 9999;
-}
-/* 
-#popup-content {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  opacity: 1;
+  /* z-index: 1000; */
 }
 
-#popup-content iframe {
+body {
   position: fixed;
   width: 100%;
   height: 100%;
+}
+.popup{
+  position: fixed;
   top: 0;
   left: 0;
-  border: none;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 3em;
+  text-align: center;
+  /* z-index: 1100; */
+}
+
+.buttons{
+  display: none;
+}
+/* 
+.timer {
+  display: block;
+  z-index: 1000;
 } */
