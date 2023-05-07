@@ -5,25 +5,33 @@
     <title>My Amazon Popup</title>
     <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
-  <main>
+  <main class="overlay">
     <body>
       <div class="popup">
+        <script src="content.js"></script>
         <div class="message">
           Popup
         </div>
-        <div class="timer">
-          <script src="timer.js"></script>
-        </div>
-        <div class="buttons">
-          <button id="leave">
-            Leave
-          </button>
+
+        <div class="container">
+          <a class="ebay" href="https://www.ebay.com/"></a>
+            <button id="leave">
+              I don't support Amazon, take me to eBay instead
+            </button>
+          </a>
+
+          <div class="progress">
+            <div class="progress-value">
+              <span class="front">Please wait to continue to the site</span>
+            </div>
+          </div>
+
           <button id="continue">
-            Continue?
+            I support these attrocities, continue to the site
           </button>
         </div>
       </div>
-      <script src="content.js"></script>
+
     </body>
   </main>
 </html>

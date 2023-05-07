@@ -1,17 +1,19 @@
-main{
-  /* background-color: #ed2939; */
+.overlay{
+  background-color: #ed2939;
   width: 100%;
   height: 100%;
-  /* z-index: 1000; */
+  font-family: Inter,sans-serif;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
-  position: fixed;
   width: 100%;
   height: 100%;
 }
 .popup{
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,17 +25,117 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* color: white; */
   font-size: 3em;
   text-align: center;
-  /* z-index: 1100; */
 }
 
-.buttons{
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 73%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#leave {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin-bottom:10px;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .3s,-webkit-box-shadow .3s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.ebay {
+  height: max-content;
+  width: max-content;
+  color: #121212;
+  text-decoration: none;
+}
+
+#leave:hover, .ebay:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  background-color: #121212;
+  color: white;
+}
+
+
+#continue {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
   display: none;
 }
-/* 
+
+#continue:hover {
+  color:black;
+}
+
 .timer {
+  position: absolute;
+  top: 0%;
+  left:0%;
   display: block;
-  z-index: 1000;
-} */
+  background-color: white;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 15s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.front {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: rgb(0, 0, 0);
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}

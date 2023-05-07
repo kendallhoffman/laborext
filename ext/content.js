@@ -1,53 +1,35 @@
-// Check if we are on Amazon.com
-if (window.location.href.indexOf("https://www.amazon.com/") != -1) {
+document.addEventListener('DOMContentLoaded', function() {
 
-  // Send message to background script to enable popup
-  chrome.runtime.sendMessage({enablePopup: true}, function(response) {
-    console.log(response);
-  });
-  
+  // Check if we are on Amazon.com
+  if (window.location.href.indexOf("https://www.amazon.com/") != -1) {
 
-  // // Create the popup element.
-  // const popup = document.createElement("div");
-
-  // // Create the message element.
-  // const message = document.createElement("div");
+    // Send message to background script to enable popup
+    chrome.runtime.sendMessage({enablePopup: true}, function(response) {
+      console.log(response);
+    });
+    // create popup element
+    const popup = document.querySelector("#popup")
 
 
-  // // Create the timer element.
-  // const timer = document.createElement("div");
+    //TIMER 
+    // get the progress and continue elements
+    const progress = document.querySelector('.progress');
+    const continueBtn = document.querySelector('#continue');
 
-  // Add the timer to the popup.
-  popup.appendChild(timer);
+    // set the timer length in seconds
+    const timerLength = 15;
 
-  // Add the message to the popup.
-  popup.appendChild(message);
+    // start the countdown timer
+    setTimeout(() => {
+      // hide the progress bar and show the continue element
+      progress.style.display = 'none';
+      continueBtn.style.display = 'block';
+    }, timerLength * 1000); // setTimeout takes milliseconds, so multiply by 1000
 
-  // Create the "Continue" button element.
-  // const continueButton = document.createElement("button");
+    //remove popup if continue button is selected
+    continueBtn.addEventListener("click", () => {
+      document.body.removeChild(popup);
+    });
 
-  // Close the popup if the button is clicked
-  continueButton.addEventListener("click", () => {
-    clearInterval(interval);
-    document.body.removeChild(popup);
-  });
-
-
-
-
-// Set the size of the popup to be the same as the browser window
-window.onload = function() {
-  window.resizeTo(screen.width, screen.height);
 }
-
-
-
-// Prevent the user from closing the popup before the time limit expires
-window.addEventListener("beforeunload", function(event) {
-  event.preventDefault();
-  event.returnValue = "Are you sure you want to leave?";
 });
-
-
-
-}
