@@ -1,7 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Check if we are on Amazon.com
-  if (window.location.href.indexOf("https://www.amazon.com/") != -1) {
+// Check if we are on Amazon.com
+if (window.location.href.indexOf("https://www.amazon.com/") != -1) {
 
     // Send message to background script to enable popup
     chrome.runtime.sendMessage({enablePopup: true}, function(response) {
@@ -27,9 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, timerLength * 1000); // setTimeout takes milliseconds, so multiply by 1000
 
     //remove popup if continue button is selected
-    continueBtn.addEventListener("click", () => {
+    chrome.browserAction.onClicked.addListener(close);
+  
+    function close() {
       document.body.removeChild(popup);
-    });
+    }
 
 }
-});
+
