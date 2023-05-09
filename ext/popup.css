@@ -23,6 +23,7 @@ body {
 .header {
     background-color: #ed2939;
     color: white;
+    border-radius: 12px;
 }
 
 /*info*/
@@ -67,8 +68,12 @@ li {
 }
 
 .headlines {
-  font-size:medium
+  font-size:x-large;
+  width: 70%;
+  margin-left:auto;
+  margin-right:auto;
 }
+
 
 /*buttons*/
 
