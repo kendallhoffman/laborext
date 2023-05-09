@@ -35,14 +35,14 @@ body {
   padding: 30px;
 }
 
-.learnmore {
+#learnmore {
   color: rgb(0, 145, 255);
   font-size: smaller;
   text-decoration: none;
 }
 
-.learnmore:hover{
-  text-decoration: solid;
+#learnmore:hover{
+  color: rgba(0, 145, 255, 0.46);
 }
 
 h2 {
