@@ -4,9 +4,8 @@
   "manifest_version": 3,
   "description": "Google Chrome extension to limit user's interactions with companies who have demonstrated labor violations",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "content.js"
   },
-  
   "permissions": [
     "scripting", 
     "activeTab", 
@@ -15,12 +14,6 @@
     "declarativeNetRequest"
   ],
   "host_permissions": ["*://www.amazon.com/*"],
-  "content_scripts": [
-    {
-      "matches": ["*://www.amazon.com/*"],
-      "js": ["content.js"]
-    }
-  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
