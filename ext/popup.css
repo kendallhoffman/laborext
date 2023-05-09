@@ -1,12 +1,14 @@
+/*Background*/
+
 .overlay{
   background-color: #ed2939;
   width: 100%;
   height: 100%;
   font-family: Anton,sans-serif;
   position: fixed;
-  z-index: 1;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /* z-index: 1; */
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
   justify-content: center;
   align-items: center;
 }
@@ -18,15 +20,17 @@ body {
   height: 100%;
 }
 
+/*info*/
 
 .message {
   color: white;
   width: 100%;
   text-align: justify;
   position: absolute;
+  padding: 30px;
 }
 
-h1 {
+h2 {
   text-align: center;
 }
 p {
@@ -34,6 +38,9 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/*buttons*/
 
 .container {
   position: fixed;
@@ -66,19 +73,19 @@ p {
   text-decoration: none;
   transition: box-shadow .3s,-webkit-box-shadow .3s;
   white-space: nowrap;
-  border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  /* border: 0; */
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  /* touch-action: manipulation; */
 }
 
-.ebay {
+/* .ebay {
   height: max-content;
   width: max-content;
   color: #121212;
   text-decoration: none;
   z-index: 1;
-}
+} */
 
 #leave:hover, .ebay:hover {
   box-shadow: #2f2e2e 0 0 0 3px, transparent 0 0 0 0;
@@ -86,6 +93,9 @@ p {
   color: white;
 }
 
+.hidden{
+  display: none; 
+}
 
 #continue {
   background-color: transparent;
@@ -94,20 +104,25 @@ p {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  display: none;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 
 #continue:hover {
-  color:black;
+  box-shadow: #2f2e2e 0 0 0 3px, transparent 0 0 0 0;
+  border-radius: 12px;
+  background-color: #121212;
+  color: white;
 }
 
-.timer {
+/* .timer {
   position: absolute;
   top: 0%;
   left:0%;
   display: block;
   background-color: white;
-}
+} */
 
 .progress {
   background: rgba(255,255,255,0.1);
@@ -122,8 +137,8 @@ p {
   width: 500px;
 }
 
-.progress-value {
-  animation: load 15s normal forwards;
+#loading {
+  animation: load 20s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
   background: #ecbcbc;
