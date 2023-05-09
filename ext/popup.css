@@ -93,9 +93,9 @@ p {
   color: white;
 }
 
-/* .hidden{
+.hidden{
   display: none; 
-} */
+}
 
 #continue {
   background-color: transparent;
@@ -104,11 +104,16 @@ p {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  display: inline-flex;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 
 #continue:hover {
-  color:black;
+  box-shadow: #2f2e2e 0 0 0 3px, transparent 0 0 0 0;
+  border-radius: 12px;
+  background-color: #121212;
+  color: white;
 }
 
 /* .timer {
@@ -132,8 +137,8 @@ p {
   width: 500px;
 }
 
-.progress-value {
-  animation: load 15s normal forwards;
+#loading {
+  animation: load 20s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
   background: #ecbcbc;
